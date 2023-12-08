@@ -48,9 +48,9 @@ class SideNavBar extends StatelessWidget {
 
           //?? list of contents ->
           ListTile(
-            leading: const Icon(Icons.favorite_sharp),
+            leading: const Icon(Icons.cleaning_services_outlined),
             title: const Text(
-              'Favourites',
+              'Tools',
               style: TextStyle(
                 fontFamily: 'poppins',
                 letterSpacing: 0.8,
@@ -59,9 +59,9 @@ class SideNavBar extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            leading: const Icon(Icons.people_alt_sharp),
+            leading: const Icon(Icons.shutter_speed_sharp),
             title: const Text(
-              'Friends',
+              'Crops',
               style: TextStyle(
                 fontFamily: 'poppins',
                 letterSpacing: 0.8,
@@ -70,9 +70,9 @@ class SideNavBar extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            leading: const Icon(Icons.share_sharp),
+            leading: const Icon(Icons.landscape),
             title: const Text(
-              'Share',
+              'Land',
               style: TextStyle(
                 fontFamily: 'poppins',
                 letterSpacing: 0.8,
@@ -110,9 +110,20 @@ class SideNavBar extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            leading: const Icon(Icons.settings),
+            leading: const Icon(Icons.share_sharp),
             title: const Text(
-              'Settings',
+              'Share',
+              style: TextStyle(
+                fontFamily: 'poppins',
+                letterSpacing: 0.8,
+              ),
+            ),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.info_outline),
+            title: const Text(
+              'About Us',
               style: TextStyle(
                 fontFamily: 'poppins',
                 letterSpacing: 0.8,
@@ -138,11 +149,11 @@ class SideNavBar extends StatelessWidget {
 
           const Center(
             child: Text(
-              'by shashwat',
+              'by Kheti Shayak',
               style: TextStyle(
                 fontFamily: 'poppins_medium',
                 letterSpacing: 0.8,
-                color: Colors.white70,
+                color: Colors.black,
               ),
             ),
           ),
