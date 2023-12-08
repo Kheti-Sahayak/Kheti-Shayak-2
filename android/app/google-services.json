@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "91138814174",
+    "project_id": "kheti-shayak",
+    "storage_bucket": "kheti-shayak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91138814174:android:9a86a7b69998197e8e924f",
+        "android_client_info": {
+          "package_name": "com.example.kheti_shayak_my_version"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXQh5FOA_q1JURt_lWSpyRpPerYBUyNhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

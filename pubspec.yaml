@@ -39,6 +39,10 @@ dependencies:
   google_fonts: ^5.1.0
   flutter_screenutil: ^5.9.0
   gradient_borders: ^1.0.0
+  firebase_core: ^2.24.2
+  google_sign_in: ^6.1.6
+  firebase_auth: ^4.15.2
+  cloud_firestore: ^4.13.5
 
 dev_dependencies:
   flutter_test:
