@@ -15,7 +15,7 @@ Widget homePageEvent(Shayak event) {
       color: cardColor,
       boxShadow: [
         BoxShadow(
-          color: Colors.black.withOpacity(0.24),
+          color: Colors.white70.withOpacity(0.24),
           blurRadius: 7,
         ),
       ],
@@ -77,10 +77,10 @@ Widget homePageEvent(Shayak event) {
                       ),
                     ),
                   ),
-                  SizedBox(width: 18.w),
+                  SizedBox(width: 15.w),
                   Container(
                     height: 48.h,
-                    width: 45.w,
+                    width: 46.w,
                     decoration: BoxDecoration(
                       color: const Color(0xffFFE87B),
                       borderRadius: BorderRadius.circular(10),
@@ -95,12 +95,14 @@ Widget homePageEvent(Shayak event) {
                             fontSize: 16.0,
                           ),
                         ),
-                        Text(
-                          event.price.toString(),
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w700,
-                            color: Colors.red,
-                            fontSize: 15.0,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 2.0),
+                          child: Text(
+                            event.price.toString(),
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w700,
+                              color: Colors.red,
+                            ),
                           ),
                         ),
                       ],
