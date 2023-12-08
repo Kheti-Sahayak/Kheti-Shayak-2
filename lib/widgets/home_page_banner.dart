@@ -10,7 +10,7 @@ Widget homePageBanner(String src) {
     decoration: BoxDecoration(
       boxShadow: [
         BoxShadow(
-          color: Colors.grey.withOpacity(0.1),
+          color: Colors.black.withOpacity(0.1),
           blurRadius: 4,
           offset: const Offset(3, 4), // Shadow position
         )
@@ -21,7 +21,7 @@ Widget homePageBanner(String src) {
       borderRadius: BorderRadius.circular(10),
       child: Image.asset(
         src,
-        fit: BoxFit.fill,
+        fit: BoxFit.cover,
       ),
     ),
   );

@@ -70,7 +70,7 @@ Widget homePageEvent(Shayak event) {
                         color: event.mode == "Renting"
                             ? Colors.greenAccent
                             : event.mode == "Selling"
-                                ? const Color(0xffFADA44)
+                                ? const Color(0xffdfc107)
                                 : const Color(0xffFF6262),
                         fontSize: 15.0,
                         letterSpacing: 0.5,
