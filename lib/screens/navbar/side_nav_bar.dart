@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kheti_shayak_my_version/utils/custom_dialog_box.dart';
 
 class SideNavBar extends StatelessWidget {
   const SideNavBar({Key? key}) : super(key: key);
@@ -142,7 +143,7 @@ class SideNavBar extends StatelessWidget {
                 letterSpacing: 0.8,
               ),
             ),
-            onTap: () {},
+            onTap: () => customDialogBox(context),
           ),
 
           const SizedBox(height: 140.0),
