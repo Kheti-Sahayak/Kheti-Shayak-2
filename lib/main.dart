@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kheti_shayak_my_version/screens/home/home_screen.dart';
+import 'package:kheti_shayak_my_version/screens/auth/login_signup_screen.dart';
 import 'package:kheti_shayak_my_version/utils/colors.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(color: appBarColor),
           useMaterial3: true,
         ),
-        home: const HomeScreen(),
+        home: const LoginSignupScreen(),
       ),
     );
   }

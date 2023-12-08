@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kheti_shayak_my_version/screens/auth/signup_screen.dart';
+import 'package:kheti_shayak_my_version/screens/home/home_screen.dart';
 
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
@@ -91,7 +92,14 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomButton(
                 customColor: const Color.fromARGB(255, 10, 185, 121),
                 text: 'Sign In',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
               ),
               const SizedBox(height: 20),
               const Text(

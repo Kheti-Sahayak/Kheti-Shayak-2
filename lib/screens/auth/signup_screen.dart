@@ -3,6 +3,7 @@ import 'package:kheti_shayak_my_version/widgets/top_logo.dart';
 
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
+import '../home/home_screen.dart';
 import 'login_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -59,7 +60,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
               CustomButton(
                 customColor: const Color.fromARGB(255, 10, 185, 121),
                 text: 'Sign Up',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
               ),
               const SizedBox(height: 20),
               const Text(
