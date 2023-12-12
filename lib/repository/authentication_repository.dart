@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:kheti_shayak_my_version/screens/auth/login_signup_screen.dart';
 import 'package:kheti_shayak_my_version/screens/home/home_screen.dart';
+import 'package:kheti_shayak_my_version/utils/helper.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -36,7 +37,9 @@ class AuthenticationRepository extends GetxController {
       firebaseUser.value != null
           ? Get.offAll(() => const HomeScreen())
           : Get.offAll(() => const LoginSignupScreen());
-    } on FirebaseAuthException catch (e) {}
+    } on FirebaseAuthException {
+      showSnackBar('Error', 'Something went wrong');
+    }
   }
 
   //?? for login
@@ -52,7 +55,9 @@ class AuthenticationRepository extends GetxController {
       firebaseUser.value != null
           ? Get.offAll(() => const HomeScreen())
           : Get.offAll(() => const LoginSignupScreen());
-    } on FirebaseAuthException catch (e) {}
+    } on FirebaseAuthException {
+      showSnackBar('Error', 'Something went wrong');
+    }
   }
 
   //?? logout
