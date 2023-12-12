@@ -50,8 +50,8 @@ class AuthenticationRepository extends GetxController {
         password: password,
       );
       firebaseUser.value != null
-          ? Get.offAll(() => const LoginSignupScreen())
-          : Get.offAll(() => const HomeScreen());
+          ? Get.offAll(() => const HomeScreen())
+          : Get.offAll(() => const LoginSignupScreen());
     } on FirebaseAuthException catch (e) {}
   }
 
