@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:kheti_shayak_my_version/repository/authentication_repository.dart';
 import 'package:kheti_shayak_my_version/screens/auth/login_signup_screen.dart';
 
 void customDialogBox(BuildContext context) async {
@@ -26,12 +28,8 @@ void customDialogBox(BuildContext context) async {
           TextButton(
             child: const Text('Yes'),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const LoginSignupScreen(),
-                ),
-              );
+              AuthenticationRepository.instance.logout();
+              Get.offAll(const LoginSignupScreen());
             },
           ),
         ],
