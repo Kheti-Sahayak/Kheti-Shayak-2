@@ -4,6 +4,7 @@ import 'package:kheti_shayak_my_version/utils/colors.dart';
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final IconData? icon;
+  final TextEditingController controller;
   final void Function()? onPressed;
   final bool obscureText; // hide the dta entered in the field
 
@@ -13,14 +14,11 @@ class CustomTextField extends StatelessWidget {
     this.icon,
     this.onPressed,
     this.obscureText = false,
+    required this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
-    //***
-    TextEditingController textEditingController =
-        TextEditingController(text: '');
-
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 25),
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -33,7 +31,7 @@ class CustomTextField extends StatelessWidget {
         children: [
           Expanded(
             child: TextField(
-              controller: textEditingController,
+              controller: controller,
               style: const TextStyle(
                 color: Color.fromARGB(255, 10, 185, 121),
                 fontWeight: FontWeight.bold,

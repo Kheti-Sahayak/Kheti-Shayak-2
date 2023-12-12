@@ -32,6 +32,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    //??
+    TextEditingController emailController = TextEditingController(text: '');
+    TextEditingController passwordController = TextEditingController(text: '');
+
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -40,9 +44,13 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               const TopLogo(width: 320),
               const SizedBox(height: 60),
-              const CustomTextField(hintText: 'Email or Username'),
+              CustomTextField(
+                controller: emailController,
+                hintText: 'Email or Username',
+              ),
               const SizedBox(height: 25),
               CustomTextField(
+                controller: passwordController,
                 hintText: 'Password',
                 onPressed: showPassword,
                 obscureText: showPass ? false : true,

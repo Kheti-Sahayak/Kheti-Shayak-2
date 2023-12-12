@@ -31,6 +31,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
+    //??
+    //??
+    TextEditingController nameController = TextEditingController(text: '');
+    TextEditingController emailController = TextEditingController(text: '');
+    TextEditingController passwordController = TextEditingController(text: '');
+    TextEditingController cPasswordController = TextEditingController(text: '');
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -39,11 +45,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
             children: [
               const TopLogo(width: 250.0),
               const SizedBox(height: 40),
-              const CustomTextField(hintText: 'Name'),
-              const SizedBox(height: 15),
-              const CustomTextField(hintText: "Email"),
+              CustomTextField(
+                controller: nameController,
+                hintText: 'Name',
+              ),
               const SizedBox(height: 15),
               CustomTextField(
+                controller: emailController,
+                hintText: "Email",
+              ),
+              const SizedBox(height: 15),
+              CustomTextField(
+                controller: passwordController,
                 hintText: 'Password',
                 onPressed: showPassword,
                 obscureText: showPass ? false : true,
@@ -51,6 +64,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               const SizedBox(height: 15),
               CustomTextField(
+                controller: cPasswordController,
                 hintText: 'Confirm Password',
                 onPressed: showConfPress,
                 obscureText: showPass ? false : true,
