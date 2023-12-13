@@ -9,6 +9,7 @@ class AuthenticationRepository extends GetxController {
 
   final _auth = FirebaseAuth.instance;
   late final Rx<User?> firebaseUser;
+  var verificationId = ''.obs;
 
   @override
   void onReady() {
@@ -62,4 +63,38 @@ class AuthenticationRepository extends GetxController {
 
   //?? logout
   Future<void> logout() async => await _auth.signOut();
+
+  //?? phone number
+  Future<void> phoneNumberAuthentication(String phoneNo) async {
+    await _auth.verifyPhoneNumber(
+      phoneNumber: phoneNo,
+      verificationCompleted: (credential) async {
+        await _auth.signInWithCredential(credential);
+      },
+      codeSent: (verificationId, resendToken) {
+        this.verificationId.value = verificationId;
+      },
+      codeAutoRetrievalTimeout: (verificationId) {
+        this.verificationId.value = verificationId;
+      },
+      verificationFailed: (e) {
+        if (e.code == 'invalid-phone-number') {
+          showSnackBar('Error', 'Phone Number is Invalid');
+        } else {
+          showSnackBar('Error', 'Something went wrong');
+        }
+      },
+    );
+  }
+
+  //?? verify otp
+  Future<bool> verifyOtp(String otp) async {
+    var credentials = await _auth.signInWithCredential(
+      PhoneAuthProvider.credential(
+        verificationId: verificationId.value,
+        smsCode: otp,
+      ),
+    );
+    return credentials.user != null ? true : false;
+  }
 }

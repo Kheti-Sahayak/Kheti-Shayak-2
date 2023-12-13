@@ -78,6 +78,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         controller.email.text.trim(),
                         controller.password.text.trim(),
                       );
+                      // SignUpController.instance.phoneAuthentication(
+                      //   controller.phoneNo.text.trim(),
+                      // );
+                      // Get.to(() => const OTPScreen());
                     }
                   },
                 ),

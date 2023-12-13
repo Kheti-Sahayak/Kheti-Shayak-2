@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:kheti_shayak_my_version/controllers/otp_controller.dart';
 import 'package:kheti_shayak_my_version/widgets/custom_button.dart';
 
 import '../../utils/colors.dart';
@@ -25,6 +26,8 @@ class OTPScreen extends StatelessWidget {
       createStyle(accentPurpleColor),
     ];
 
+    var otp;
+
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(10.0),
@@ -45,13 +48,17 @@ class OTPScreen extends StatelessWidget {
               borderColor: Colors.teal,
               styles: otpTextStyles,
               keyboardType: TextInputType.number,
+              onSubmit: (code) {
+                otp = code;
+                OtpController.instance.verifyOtp(otp);
+              },
             ),
             const SizedBox(height: 100.0),
             CustomButton(
               customColor: Colors.green,
               text: 'Submit',
               onTap: () {
-                Navigator.of(context).pop();
+                OtpController.instance.verifyOtp(otp);
               },
             ),
           ],

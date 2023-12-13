@@ -136,7 +136,6 @@ class SideNavBar extends StatelessWidget {
               Get.to(() => const OTPScreen());
             },
           ),
-
           const Divider(),
           ListTile(
             leading: const Icon(Icons.logout_sharp),
