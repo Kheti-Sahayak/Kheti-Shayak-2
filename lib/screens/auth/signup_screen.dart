@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kheti_shayak_my_version/controllers/sigh_up_controller.dart';
+import 'package:kheti_shayak_my_version/model/user_model.dart';
 import 'package:kheti_shayak_my_version/widgets/top_logo.dart';
 
 import '../../widgets/custom_button.dart';
@@ -74,14 +75,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   text: 'Sign Up',
                   onTap: () {
                     if (formKey.currentState!.validate()) {
-                      SignUpController.instance.registerUser(
-                        controller.email.text.trim(),
-                        controller.password.text.trim(),
-                      );
+                      // SignUpController.instance.registerUser(
+                      //   controller.email.text.trim(),
+                      //   controller.password.text.trim(),
+                      // );
                       // SignUpController.instance.phoneAuthentication(
                       //   controller.phoneNo.text.trim(),
                       // );
                       // Get.to(() => const OTPScreen());
+                      final user = UserModel(
+                        fullName: controller.fullName.text.trim(),
+                        email: controller.email.text.trim(),
+                        password: controller.password.text.trim(),
+                        phoneNo: controller.phoneNo.text.trim(),
+                      );
+                      SignUpController.instance.createUser(user);
                     }
                   },
                 ),
