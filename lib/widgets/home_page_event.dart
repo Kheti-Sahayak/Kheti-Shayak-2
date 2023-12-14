@@ -77,10 +77,10 @@ Widget homePageEvent(Shayak event) {
                       ),
                     ),
                   ),
-                  SizedBox(width: 15.w),
+                  SizedBox(width: 10.w),
                   Container(
                     height: 48.h,
-                    width: 46.w,
+                    width: 48.w,
                     decoration: BoxDecoration(
                       color: const Color(0xffFFE87B),
                       borderRadius: BorderRadius.circular(10),
