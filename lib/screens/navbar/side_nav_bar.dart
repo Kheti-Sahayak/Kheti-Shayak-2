@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kheti_shayak_my_version/controllers/profile_controller.dart';
 import 'package:kheti_shayak_my_version/model/user_model.dart';
-import 'package:kheti_shayak_my_version/screens/auth/otp_screen.dart';
 import 'package:kheti_shayak_my_version/utils/custom_dialog_box.dart';
 
 class SideNavBar extends StatelessWidget {
@@ -185,9 +184,7 @@ class SideNavBar extends StatelessWidget {
                 letterSpacing: 0.8,
               ),
             ),
-            onTap: () {
-              Get.to(() => const OTPScreen());
-            },
+            onTap: () {},
           ),
           const Divider(),
           ListTile(
