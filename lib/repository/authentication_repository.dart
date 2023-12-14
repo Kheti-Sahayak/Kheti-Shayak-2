@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:kheti_shayak_my_version/screens/auth/login_signup_screen.dart';
 import 'package:kheti_shayak_my_version/screens/home/home_screen.dart';
 import 'package:kheti_shayak_my_version/utils/helper.dart';
@@ -96,5 +97,24 @@ class AuthenticationRepository extends GetxController {
       ),
     );
     return credentials.user != null ? true : false;
+  }
+
+  //?? google
+  Future<UserCredential?> signInWithGoogle() async {
+    try {
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+      final GoogleSignInAuthentication? googleAuth =
+          await googleUser?.authentication;
+
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      return await FirebaseAuth.instance.signInWithCredential(credential);
+    } catch (e) {
+      showSnackBar('Error', 'Something wrong $e');
+    }
   }
 }

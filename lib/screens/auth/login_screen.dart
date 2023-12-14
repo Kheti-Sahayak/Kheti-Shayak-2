@@ -123,15 +123,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                Container(
-                  padding: const EdgeInsets.all(7),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.grey.shade700),
-                  ),
-                  child: Image.asset(
-                    'assets/images/google.png',
-                    width: 50,
+                GestureDetector(
+                  onTap: () => controller.googleSignIn(),
+                  child: Container(
+                    padding: const EdgeInsets.all(7),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.grey.shade700),
+                    ),
+                    child: Image.asset(
+                      'assets/images/google.png',
+                      width: 50,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 40),

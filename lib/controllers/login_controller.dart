@@ -14,4 +14,8 @@ class LoginController extends GetxController {
     AuthenticationRepository.instance
         .loginWithEmailAndPassword(email, password);
   }
+
+  Future<void> googleSignIn() async {
+    await AuthenticationRepository.instance.signInWithGoogle();
+  }
 }

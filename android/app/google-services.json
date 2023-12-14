@@ -12,7 +12,20 @@
           "package_name": "com.example.kheti_shayak_my_version"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "91138814174-v3kp2ljluk9sv9vhbm6rq5dkk993j66q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kheti_shayak_my_version",
+            "certificate_hash": "09935af56a393f8e3ac574ecd1c22113a11c45c9"
+          }
+        },
+        {
+          "client_id": "91138814174-a5b0v0qto9jrocfslvldmabnbcpet2jk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBXQh5FOA_q1JURt_lWSpyRpPerYBUyNhE"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91138814174-a5b0v0qto9jrocfslvldmabnbcpet2jk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "91138814174-5n2oc4s8qf73akrsdmeadnjfl10v9iu4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.khetiShayakMyVersion"
+              }
+            }
+          ]
         }
       }
     }
