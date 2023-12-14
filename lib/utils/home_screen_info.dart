@@ -1,11 +1,11 @@
 class HomeScreenInfo {
   //?? for top images ->
   static const List<String> topImageSrc = [
-    'assets/images/plant_care.jpg',
-    'assets/images/google.png',
-    'assets/images/plant_care.jpg',
-    'assets/images/facebook.png',
-    'assets/images/plant_care.jpg',
+    'assets/images/hal.png',
+    'assets/images/channa.jpg',
+    'assets/images/kudal.jpg',
+    'assets/images/land5.jpg',
+    'assets/images/chameli.jpg',
   ];
 
   //?? Tools detail ->
@@ -34,22 +34,22 @@ class HomeScreenInfo {
   ];
 
   static const List<String> toolImageSrc = [
-    'assets/images/plant_care.jpg',
-    'assets/images/google.png',
-    'assets/images/plant_care.jpg',
-    'assets/images/facebook.png',
-    'assets/images/plant_care.jpg',
+    'assets/images/kudal.jpg',
+    'assets/images/hal.png',
+    'assets/images/tractor.jpg',
+    'assets/images/daranti.jpg',
+    'assets/images/jotna.jpg',
   ];
 
   //************************************************************************************************************************
 
   //?? crops details ->
   static const List<String> cropsNames = [
-    'कुदाल',
-    'हल',
-    'ट्रैक्टर',
-    'दरांती',
-    'जोतना',
+    'धान',
+    'गेंहूँ',
+    'चना',
+    'चमेली',
+    'सूरजमुखी',
   ];
 
   static const List<String> cropsMode = [
@@ -61,30 +61,30 @@ class HomeScreenInfo {
   ];
 
   static const List<double> cropsPrice = [
-    1200,
-    450,
-    623,
-    456,
-    789,
+    85,
+    45,
+    62,
+    45,
+    80,
   ];
 
   static const List<String> cropsImageSrc = [
-    'assets/images/plant_care.jpg',
-    'assets/images/google.png',
-    'assets/images/plant_care.jpg',
-    'assets/images/facebook.png',
-    'assets/images/plant_care.jpg',
+    'assets/images/dhaan.jpg',
+    'assets/images/gayhu.jpg',
+    'assets/images/channa.jpg',
+    'assets/images/chameli.jpg',
+    'assets/images/surajmukhi.jpg',
   ];
 
   //************************************************************************************************************************
 
   //?? land details ->
   static const List<String> landNames = [
-    'कुदाल',
-    'हल',
-    'ट्रैक्टर',
-    'दरांती',
-    'जोतना',
+    '',
+    '',
+    '',
+    '',
+    '',
   ];
 
   static const List<String> landMode = [
@@ -96,20 +96,19 @@ class HomeScreenInfo {
   ];
 
   static const List<double> landPrice = [
-    1200,
-    450,
-    623,
-    456,
-    789,
+    200,
+    4500,
+    6230,
+    4560,
+    7890,
   ];
 
   static const List<String> landImageSrc = [
-    'assets/images/plant_care.jpg',
-    'assets/images/google.png',
-    'assets/images/plant_care.jpg',
-    'assets/images/facebook.png',
-    'assets/images/plant_care.jpg',
+    'assets/images/land1.jpg',
+    'assets/images/land2.jpg',
+    'assets/images/land3.jpg',
+    'assets/images/land4.jpg',
+    'assets/images/land5.jpg',
   ];
 //************************************************************************************************************************
 }
-

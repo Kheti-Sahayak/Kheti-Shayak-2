@@ -79,33 +79,35 @@ Widget homePageEvent(Shayak event) {
                   ),
                   SizedBox(width: 10.w),
                   Container(
-                    height: 48.h,
-                    width: 48.w,
+                    height: 47.h,
+                    width: 47.w,
                     decoration: BoxDecoration(
                       color: const Color(0xffFFE87B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '₹',
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 2.0),
-                          child: Text(
-                            event.price.toString(),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '₹',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w700,
-                              color: Colors.red,
+                              fontSize: 16.0,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 2.0),
+                            child: Text(
+                              event.price.toString(),
+                              style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w700,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
