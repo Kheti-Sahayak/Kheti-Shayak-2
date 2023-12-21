@@ -10,7 +10,7 @@ void customDialogBox(BuildContext context) async {
     builder: (BuildContext context) {
       return AlertDialog(
         // <-- SEE HERE
-        title: const Text('Cancel booking'),
+        title: const Text('Logout??'),
         content: const SingleChildScrollView(
           child: ListBody(
             children: <Widget>[
