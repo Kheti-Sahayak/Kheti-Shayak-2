@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:kheti_shayak_my_version/controllers/profile_controller.dart';
 import 'package:kheti_shayak_my_version/model/user_model.dart';
 import 'package:kheti_shayak_my_version/utils/custom_dialog_box.dart';
+import 'package:wiredash/wiredash.dart';
 
 class SideNavBar extends StatelessWidget {
   const SideNavBar({Key? key}) : super(key: key);
@@ -165,15 +166,17 @@ class SideNavBar extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            leading: const Icon(Icons.share_sharp),
+            leading: const Icon(Icons.feedback_outlined),
             title: const Text(
-              'Share',
+              'Feedback',
               style: TextStyle(
                 fontFamily: 'poppins',
                 letterSpacing: 0.8,
               ),
             ),
-            onTap: () {},
+            onTap: () {
+              Wiredash.of(context).show(inheritMaterialTheme: true);
+            },
           ),
           ListTile(
             leading: const Icon(Icons.info_outline),

@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:kheti_shayak_my_version/repository/authentication_repository.dart';
 import 'package:kheti_shayak_my_version/screens/auth/login_signup_screen.dart';
 import 'package:kheti_shayak_my_version/utils/colors.dart';
+import 'package:kheti_shayak_my_version/utils/secret_key.dart';
+import 'package:wiredash/wiredash.dart';
 
 import 'firebase_options.dart';
 
@@ -30,15 +32,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder: (context, child) => GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          scaffoldBackgroundColor: bgColor,
-          appBarTheme: const AppBarTheme(color: appBarColor),
-          useMaterial3: true,
+      builder: (context, child) => Wiredash(
+        projectId: projectId,
+        secret: secret,
+        child: GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            scaffoldBackgroundColor: bgColor,
+            appBarTheme: const AppBarTheme(color: appBarColor),
+            useMaterial3: true,
+          ),
+          home: const LoginSignupScreen(),
         ),
-        home: const LoginSignupScreen(),
       ),
     );
   }
