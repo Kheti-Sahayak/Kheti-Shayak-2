@@ -67,9 +67,9 @@ Widget homePageEvent(Shayak event) {
                     child: Text(
                       event.mode,
                       style: GoogleFonts.poppins(
-                        color: event.mode == "Renting"
+                        color: event.mode == "िराए पर"
                             ? Colors.greenAccent
-                            : event.mode == "Selling"
+                            : event.mode == "बेचना"
                                 ? const Color(0xffdfc107)
                                 : const Color(0xffFF6262),
                         fontSize: 15.0,

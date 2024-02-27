@@ -45,6 +45,7 @@ dependencies:
   firebase_auth: ^4.15.2
   cloud_firestore: ^4.13.5
   get: ^4.6.5
+  wiredash: ^2.0.0
 
 dev_dependencies:
   flutter_test:

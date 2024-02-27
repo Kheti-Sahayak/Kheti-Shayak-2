@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Tools",
+                    "औजार",
                     style: GoogleFonts.poppins(
                       color: const Color(0xffF9A826),
                       fontWeight: FontWeight.w600,
@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   InkWell(
                     onTap: () {},
                     child: Text(
-                      "View more",
+                      "और देखें",
                       style: GoogleFonts.poppins(
                         color: const Color(0xff7B7B7B),
                         fontSize: 18,
@@ -140,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Crops",
+                    "फसलें",
                     style: GoogleFonts.poppins(
                       color: const Color(0xffF9A826),
                       fontWeight: FontWeight.w600,
@@ -150,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   InkWell(
                     onTap: () {},
                     child: Text(
-                      "View more",
+                      "और देखें",
                       style: GoogleFonts.poppins(
                         color: const Color(0xff7B7B7B),
                         fontSize: 18,
@@ -208,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Land",
+                    "भूमि",
                     style: GoogleFonts.poppins(
                       color: const Color(0xffF9A826),
                       fontWeight: FontWeight.w600,
@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Text(
-                    "View more",
+                    "और देखें",
                     style: GoogleFonts.poppins(
                       color: const Color(0xff7B7B7B),
                       fontSize: 18,

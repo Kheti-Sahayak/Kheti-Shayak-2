@@ -18,11 +18,11 @@ class HomeScreenInfo {
   ];
 
   static const List<String> toolMode = [
-    'Renting',
-    'Selling',
-    'Renting',
-    'Selling',
-    'Selling',
+    'किराए पर',
+    'बेचना',
+    'किराए पर',
+    'बेचना',
+    'बेचना',
   ];
 
   static const List<double> toolPrice = [
@@ -53,11 +53,11 @@ class HomeScreenInfo {
   ];
 
   static const List<String> cropsMode = [
-    'Renting',
-    'Selling',
-    'Renting',
-    'Selling',
-    'Selling',
+    'किराए पर',
+    'बेचना',
+    'किराए पर',
+    'बेचना',
+    'बेचना',
   ];
 
   static const List<double> cropsPrice = [
@@ -88,11 +88,11 @@ class HomeScreenInfo {
   ];
 
   static const List<String> landMode = [
-    'Renting',
-    'Selling',
-    'Renting',
-    'Selling',
-    'Selling',
+    'किराए पर',
+    'बेचना',
+    'किराए पर',
+    'बेचना',
+    'बेचना',
   ];
 
   static const List<double> landPrice = [
